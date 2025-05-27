@@ -4,7 +4,7 @@
   "description": "",
   "license": "ECL 2.0",
   "type": "module",
-  "homepage": "https://vladyslav-savchenko-cs.github.io/db/",
+  "homepage": "https://stercoreo.github.io/db/",
   "scripts": {
     "docs:build": "vuepress-vite build docs",
     "docs:clean-dev": "vuepress-vite dev docs --clean-cache",

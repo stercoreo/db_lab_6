@@ -1,43 +1,69 @@
-## Requirements
+# README
 
-- Python
-- MySQL database
-- pip
+## Опис проєкту
 
-## Installation
+Цей проєкт — REST API на Flask з базою даних SQLite.  
+Він реалізує керування користувачами, ролями, дозволами та публікаціями (постами).
 
-1. Clone repo:
-   ```bash
-   git clone https://your-repo-url.git
-   cd your-repo
-   ```
+---
 
-2. Create a .env file in the root folder:
-   ```ini
-   DB_HOST=localhost
-   DB_PORT=3306
-   DB_NAME=db_name
-   DB_USER=user
-   DB_PASSWORD=password
-   JWT_SECRET_KEY=secretkey
-   ```
+## Початок роботи
 
-3. Install dependencies (or do it in venv):
-   ```bash
-   pip install -r requirements.txt
-   ```
-  
-4. Run database migrations:
-   ```bash
-   python db/migrate.py
-   ```
-  
-5. Seed the database with initial data:
-   ```bash
-   python db/seed.py
-   ```
+### Встановлення залежностей
 
-6. Start the development server:
-   ```bash
-   python app.py
-   ```
+```bash
+pip install -r requirements.txt
+```
+
+### Ініціалізація бази даних
+
+База створюється автоматично при першому запуску додатку.
+
+---
+
+## Запуск
+
+1. Запусти сервер:
+
+```bash
+python app.py
+```
+
+2. Сервер буде доступний за адресою:  
+`http://127.0.0.1:5000`
+
+---
+
+## Основні ендпоінти API
+
+- `/register` — реєстрація користувача
+- `/login` — логін користувача
+- `/posts` — створення і отримання постів
+- `/roles`, `/permissions`, `/users` — додаткові кінцеві точки (за потребою)
+
+---
+
+## Заповнення бази початковими даними
+
+Для додавання тестових ролей, дозволів, користувачів і постів використовуйте SQL-скрипт із файлу `seed.sql` або вручну через SQLite.
+
+---
+
+## Тестування API
+
+Для тестування API можна використовувати `curl`, Postman або будь-який інший HTTP клієнт.
+
+---
+
+## Скріни тестів
+
+Нижче — приклади результатів тестування API:
+
+### 1. Отримання списку користувачів
+
+![Створення поста](./assets/test_users.png)
+---
+
+### 2. Отримання списку постів
+
+![Отримання постів](./assets/test_posts.png)
